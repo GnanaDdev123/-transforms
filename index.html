@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transfoms</title>
+    <style>
+        body{
+            background-color: black;
+            display: grid;
+            justify-content: center;
+            margin-top: 100px;
+        }
+        #mainbox{
+            height: 500px;
+            width: 500px;
+            /* border: 1px solid whitesmoke; */
+            background-color: black;
+
+        }
+        .box{
+            border: 1px solid;
+            height: 425px;
+            width: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;    
+        }
+        .cd{
+            height: 150px;
+            width: 150px;
+            border: 0px solid black;
+            border-radius: 10px;
+            /* background-image: ; */
+            box-shadow: 0px 0px 50px 20px red ,-0px -0px 50px 20px red;
+            transition: 1s;
+            /* background-color: red; */
+        }
+        .p1:hover ~ .cd{
+            transform: rotate(360deg);
+            transition-duration: 0.8s;
+            background-image: repeating-conic-gradient(red 0deg 10deg, yellow 10deg 20deg, blue 20deg 30deg);
+            border-radius:50%;
+        }
+        .p2:hover ~ .cd{
+            transform: translate(-100px,100px);
+            transition-duration: 0.8s;
+            background-image: repeating-linear-gradient(190deg,red,rgb(255, 0, 251) 7%,yellow 20%);
+        }
+        .p3:hover ~ .cd{
+            transform: scale(1.8);
+            transition-duration: 1s;
+            /* background-image: linear-gradient(black,red,pink,yellow,orange) */
+            background-image: repeating-radial-gradient(red, yellow 10%, rgb(0, 255, 47) 5%);
+
+        }
+        .p4:hover ~ .cd{
+            transform: perspective();
+            transform: perspective(10px) rotate(150deg) scale(1.5) skew(20deg);
+        }
+        .p1{ 
+            position: absolute;
+            top: 10px;
+            left: 30px;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #fff;
+        }
+        .p2{
+            position: absolute;
+            top: 10px;
+            left: 80px;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #fff;
+        }
+        .p3{
+            position: absolute;
+            top: 10px;
+            left: 165px;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #fff;
+        }
+        .p4{
+            position: absolute;
+            top: 10px;
+            left: 220px;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            transition: 3s;
+            color: #fff;
+        }
+        a{
+            color: aliceblue;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="mainbox">
+        <div class="box">
+            <p class="p1">rotat,</p>
+            <p class="p2">translate,</p>
+            <p class="p3">scale,</p>
+            <p class="p4">perspectiv</p>
+            <div class="cd"></div>
+        </div>
+
+    </div>    
+</body>
+</html>
